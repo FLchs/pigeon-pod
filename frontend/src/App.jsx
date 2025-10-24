@@ -26,7 +26,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path={process.env.PIGEON_BASE_URL} element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="user-setting" element={<UserSetting />} />
         <Route path="/:type/:feedId" element={<ChannelDetail />} />
